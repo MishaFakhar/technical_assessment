@@ -1,0 +1,52 @@
+{
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/find-jobs",
+      "body": {
+        "position": "Full Stack Engineer",
+        "experience": "2 years",
+        "salary": "70,000 PKR to 120,000 PKR",
+        "jobNature": "onsite",
+        "location": "Peshawar, Pakistan",
+        "skills": "full stack, MERN, Node.js, Express.js, React.js, Next.js, Firebase, TailwindCSS, CSS Frameworks, Tokens handling"
+      },
+      "headers": {
+        "accept": "application/json",
+        "Content-Type": "application/json"
+      }
+    },
+    "response": {
+      "status_code": 200,
+      "body": {
+        "relevant_jobs": [
+          {
+            "job_title": "Full Stack Engineer - LinkedIn",
+            "company": "LinkedIn Corporation",
+            "experience": "2+ years",
+            "jobNature": "onsite",
+            "location": "Karachi, Pakistan",
+            "salary": "115,000 PKR",
+            "apply_link": "https://linkedin.com/job789",
+            "source": "LinkedIn"
+          },
+          {
+            "job_title": "React Developer",
+            "company": "LinkedIn Partner",
+            "experience": "2 years",
+            "jobNature": "onsite",
+            "location": "Lahore, Pakistan",
+            "salary": "95,000 PKR",
+            "apply_link": "https://linkedin.com/job456",
+            "source": "LinkedIn"
+          }
+        ]
+      },
+      "headers": {
+        "content-length": "481",
+        "content-type": "application/json",
+        "date": "Wed,23 Apr 2025 16:28:36 GMT",
+        "server": "uvicorn"
+      }
+    }
+  }
+  
