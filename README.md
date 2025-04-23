@@ -1,45 +1,40 @@
-🔍 JobFinder API
-A FastAPI application that helps users discover job listings tailored to their preferences by integrating mock data and live job scraping (Rozee.pk), with optional intelligent filtering via OpenAI's GPT model.
+# 🔍 JobFinder API
 
-🚀 Features
-🔧 Input Customization: Search based on position, experience, salary, job nature, location, and skills.
+A FastAPI application that helps users discover job listings tailored to their preferences. It integrates live job scraping from Rozee.pk and mock data, with optional intelligent filtering using OpenAI's GPT model.
 
-🧠 AI Relevance Filtering: Uses OpenAI's GPT (if enabled) to determine job match relevance.
+---
 
-🌐 Live Scraping: Fetches jobs from Rozee.pk using BeautifulSoup.
+## 🚀 Features
 
-📄 Mock Listings: Simulated job data from LinkedIn for demo and interview purposes.
+- 🔧 Input Customization: Search by position, experience, salary, job nature, location, and skills.
+- 🧠 AI Relevance Filtering: Uses OpenAI GPT to determine relevance of job listings (optional).
+- 🌐 Live Scraping: Retrieves job postings from Rozee.pk.
+- 📄 Mock Listings: Simulated LinkedIn data for demo/interview purposes.
+- 📤 Unified API Endpoint: Returns job listings from both sources.
 
-📤 Unified API Endpoint: Returns job listings from both sources in a consistent format.
+---
 
-📦 Requirements
-Python 3.7+
+## 📦 Requirements
 
-FastAPI
-
-Uvicorn
-
-Requests
-
-BeautifulSoup4
-
-OpenAI (optional for relevance filtering)
+- Python 3.7+
+- FastAPI
+- Uvicorn
+- Requests
+- BeautifulSoup4
+- OpenAI (optional)
 
 Install dependencies:
-
+```bash
+pip install fastapi uvicorn requests beautifulsoup4 openai
+🛠️ File Structure
 bash
 Copy
 Edit
-pip install fastapi uvicorn requests beautifulsoup4 openai
-🛠️ File Structure
-graphql
-Copy
-Edit
 .
-├── main.py          # FastAPI app with scraping, AI filtering, and mock data
-├── README.md        # Project documentation
+├── main.py       # FastAPI app
+├── README.md     # Project documentation
 🧪 How It Works
-Input Schema (JobRequest)
+Input (JobRequest)
 json
 Copy
 Edit
@@ -51,9 +46,7 @@ Edit
   "location": "Karachi",
   "skills": "Python, React"
 }
-Output Schema (JobResponse)
-Returns a list of JobListing:
-
+Output (JobResponse)
 json
 Copy
 Edit
@@ -68,41 +61,38 @@ Edit
       "salary": "95,000 PKR",
       "apply_link": "https://linkedin.com/job456",
       "source": "LinkedIn"
-    },
-    ...
+    }
   ]
 }
 🔓 Optional: OpenAI Filtering
 To enable GPT-based job filtering:
 
-Uncomment the openai.api_key line in main.py.
+Uncomment the openai.api_key line in main.py
 
-Set your OpenAI key:
+Set your API key:
 
 python
 Copy
 Edit
 openai.api_key = "your-key-here"
-If disabled or commented, the is_relevant function defaults to a mock version that always returns True.
+If left disabled, a mock relevance check always returns True.
 
 🧪 Run the API
-Start the FastAPI server with Uvicorn:
+Start the FastAPI server using:
 
 bash
 Copy
 Edit
 uvicorn main:app --reload
-Open your browser and go to:
+Then open:
 
 arduino
 Copy
 Edit
 http://127.0.0.1:8000/docs
-Use the Swagger UI to test the /find-jobs POST endpoint.
+Use the Swagger UI to test /find-jobs.
 
-✅ Example
-Try the following in Swagger UI:
-
+✅ Sample Request
 json
 Copy
 Edit
@@ -115,11 +105,11 @@ Edit
   "skills": "Django, PostgreSQL"
 }
 📌 Notes
-Scraping from Rozee.pk is basic and limited to 5 jobs for demonstration.
+Rozee.pk scraping is limited to 5 listings for demonstration.
 
-LinkedIn jobs are mocked, not real-time scraped.
+LinkedIn listings are mock data.
 
-This project is structured for interview/demo purposes.
+This is built for educational/demo purposes.
 
 🧠 Credits
 Built with ❤️ using:
@@ -129,4 +119,3 @@ FastAPI
 OpenAI
 
 BeautifulSoup
-
