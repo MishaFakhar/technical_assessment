@@ -26,18 +26,18 @@ A FastAPI application that helps users discover job listings tailored to their p
 Install dependencies:
 ```bash
 pip install fastapi uvicorn requests beautifulsoup4 openai
-🛠️ File Structure
-bash
-Copy
-Edit
+## 🛠️ File Structure
+- bash
+- Copy
+- Edit
 .
 ├── main.py       # FastAPI app
 ├── README.md     # Project documentation
-🧪 How It Works
-Input (JobRequest)
-json
-Copy
-Edit
+## 🧪 How It Works
+- Input (JobRequest)
+- json
+- Copy
+- Edit
 {
   "position": "Software Engineer",
   "experience": "2 years",
@@ -64,38 +64,38 @@ Edit
     }
   ]
 }
-🔓 Optional: OpenAI Filtering
-To enable GPT-based job filtering:
+## 🔓 Optional: OpenAI Filtering
+- To enable GPT-based job filtering:
 
-Uncomment the openai.api_key line in main.py
+- Uncomment the openai.api_key line in main.py
 
 Set your API key:
 
-python
-Copy
-Edit
-openai.api_key = "your-key-here"
-If left disabled, a mock relevance check always returns True.
+- python
+- Copy
+- Edit
+- openai.api_key = "your-key-here"
+- If left disabled, a mock relevance check always returns True.
 
-🧪 Run the API
+## 🧪 Run the API
 Start the FastAPI server using:
 
-bash
-Copy
-Edit
-uvicorn main:app --reload
-Then open:
+- bash
+- Copy
+- Edit
+- uvicorn main:app --reload
+- Then open:
 
-arduino
-Copy
-Edit
-http://127.0.0.1:8000/docs
-Use the Swagger UI to test /find-jobs.
+- arduino
+- Copy
+- Edit
+- http://127.0.0.1:8000/docs
+- Use the Swagger UI to test /find-jobs.
 
-✅ Sample Request
-json
-Copy
-Edit
+## ✅ Sample Request
+- json
+- Copy
+- Edit
 {
   "position": "Backend Developer",
   "experience": "3 years",
@@ -104,18 +104,18 @@ Edit
   "location": "Lahore",
   "skills": "Django, PostgreSQL"
 }
-📌 Notes
-Rozee.pk scraping is limited to 5 listings for demonstration.
+## 📌 Notes
+- Rozee.pk scraping is limited to 5 listings for demonstration.
 
-LinkedIn listings are mock data.
+- LinkedIn listings are mock data.
 
-This is built for educational/demo purposes.
+- This is built for educational/demo purposes.
 
-🧠 Credits
+## 🧠 Credits
 Built with ❤️ using:
 
-FastAPI
+- FastAPI
 
-OpenAI
+- OpenAI
 
-BeautifulSoup
+- BeautifulSoup
